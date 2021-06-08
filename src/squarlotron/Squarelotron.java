@@ -32,7 +32,10 @@ public class Squarelotron {
     
     public Squarelotron upsideDownFlip(int ring) {
 	//stub
+	
+	//create a new squarelotron and modify it
 	Squarelotron anotherSquarelotron = new Squarelotron(this.size);
+	anotherSquarelotron.squarelotron = this.squarelotron;
 	
 	return anotherSquarelotron;
 	

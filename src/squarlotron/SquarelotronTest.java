@@ -40,7 +40,7 @@ class SquarelotronTest {
 	
 	System.out.print("\r\n\r\n");
 	
-	mySquarelotron.upsideDownFlip(1);
+	Squarelotron newSquarelotron = mySquarelotron.upsideDownFlip(1);
 	
 	//compare
 	for (int i = 0; i < size; i++) {
@@ -84,12 +84,12 @@ class SquarelotronTest {
 	
 	System.out.print("\r\n\r\n");
 	
-	mySquarelotron.upsideDownFlip(1);
+	Squarelotron newSquarelotron = mySquarelotron.mainDiagonalFlip(1);
 	
 	//compare
 	for (int i = 0; i < size; i++) {
 	    for (int j = 0; j < size; j++) {
-		if(testSquarelotron[i][j] != mySquarelotron.squarelotron[i][j])
+		if(testSquarelotron[i][j] != newSquarelotron.squarelotron[i][j])
 		    failure = true;
 	    }
 	}
@@ -127,7 +127,7 @@ class SquarelotronTest {
 	
 	System.out.print("\r\n\r\n");
 	
-	mySquarelotron.upsideDownFlip(1);
+	mySquarelotron.rotateRight(1);
 	
 	//compare
 	for (int i = 0; i < size; i++) {
