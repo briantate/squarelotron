@@ -29,6 +29,31 @@ public class Squarelotron {
 	    System.out.print("\r\n");
 	}
     }
+    
+    public Squarelotron upsideDownFlip(int ring) {
+	//stub
+	Squarelotron anotherSquarelotron = new Squarelotron(this.size);
+	
+	return anotherSquarelotron;
+	
+    }
+    
+    public Squarelotron mainDiagonalFlip(int ring) {
+	//stub
+	Squarelotron anotherSquarelotron = new Squarelotron(this.size);
+	
+	return anotherSquarelotron;
+	
+    }
+    
+    public void rotateRight(int numberOfTurns) {
+	//stub
+	return;
+    }
+    
+    
+    
+    /* main method */
 
     public static void main(String[] args) {
 	Scanner scanner = new Scanner(System.in);
