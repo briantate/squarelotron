@@ -32,10 +32,29 @@ public class Squarelotron {
     
     public Squarelotron upsideDownFlip(int ring) {
 	//stub
+	if(1 > ring)
+	{
+	    System.out.print("invalid ring\r\n");
+	}
 	
 	//create a new squarelotron and modify it
 	Squarelotron anotherSquarelotron = new Squarelotron(this.size);
-	anotherSquarelotron.squarelotron = this.squarelotron;
+	//copy data into new squarelotron
+	for (int i = 0; i < this.size; i++) {
+	    for (int j = 0; j < this.size; j++) {
+		anotherSquarelotron.squarelotron[i][j] = this.squarelotron[i][j];
+	    }
+	}
+	
+	//loop through all items and modify if needed
+	for (int i = 0; i < this.size; i++) {
+	    for (int j = 0; j < this.size; j++) {
+		//look for elements on the ring
+		if((i == ring - 1)||(i == this.size - ring) || (j == ring -1) || (j == size - ring)) {
+		    anotherSquarelotron.squarelotron[i][j] = this.squarelotron[Math.abs(i-(size-ring))][j];
+		}
+	    }
+	}
 	
 	return anotherSquarelotron;
 	

@@ -17,7 +17,7 @@ class SquarelotronTest {
 
     @Test
     void testUpsideDownFlip() {
-//	fail("Not yet implemented");
+	
 	System.out.print("testUpsideDownFlip \r\n\r\n");
 	
 	boolean failure = false;
@@ -45,17 +45,24 @@ class SquarelotronTest {
 	//compare
 	for (int i = 0; i < size; i++) {
 	    for (int j = 0; j < size; j++) {
-		if(testSquarelotron[i][j] != mySquarelotron.squarelotron[i][j])
+		if(testSquarelotron[i][j] != newSquarelotron.squarelotron[i][j])
+		{
 		    failure = true;
+		    System.out.printf("err:[%d][%d]\r\n",i,j);
+		}
 	    }
 	}
 	
-	System.out.print("mySquarelotron:\r\n");
-	mySquarelotron.printSquarelotron();
+	System.out.print("newSquarelotron:\r\n");
+	newSquarelotron.printSquarelotron();
 	System.out.print("\r\n\r\n");
 	
-	if(failure)
+	if(failure) {
+	    System.out.println("fail");
 	    fail("wrong values");
+	}else {
+	    System.out.println("pass");
+	}
 	
 	
     }
@@ -94,8 +101,8 @@ class SquarelotronTest {
 	    }
 	}
 	
-	System.out.print("mySquarelotron:\r\n");
-	mySquarelotron.printSquarelotron();
+	System.out.print("newSquarelotron:\r\n");
+	newSquarelotron.printSquarelotron();
 	System.out.print("\r\n\r\n");
 	
 	if(failure)
